@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Rat Games Music</title>
+<title>Geeiker Games Music</title>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
 <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
 <style>
@@ -261,9 +261,9 @@ body.lmode .track-meta h1 { font-size: 1.4rem; }
     <button class="abtn" onclick="showOv('search-overlay')">🔍 Search</button>
     <button class="gbtn" onclick="showOv('settings-overlay')">⚙️</button>
   </div>
-  <div id="art-zone"><div class="art-ph">RAT GAMES</div></div>
+  <div id="art-zone"><div class="art-ph">Geeiker Games</div></div>
   <div class="track-meta">
-    <h1 id="d-title">RAT GAMES Music</h1>
+    <h1 id="d-title">Geeiker Games Music</h1>
     <p id="d-artist">Search or import a playlist to get started</p>
   </div>
   <div id="lyric-box"></div>
@@ -339,9 +339,9 @@ body.lmode .track-meta h1 { font-size: 1.4rem; }
     </div>
     <div id="fs-handle" onclick="closeFs()"></div>
     <div id="fs-content">
-      <div id="fs-art"><div class="art-ph">RAT GAMES</div></div>
+      <div id="fs-art"><div class="art-ph">Geeiker Games</div></div>
       <div id="fs-meta">
-        <div id="fs-title">RAT GAMES Music</div>
+        <div id="fs-title">Geeiker Games Music</div>
         <div id="fs-artist">—</div>
       </div>
       <div id="fs-lyrics"></div>
@@ -568,7 +568,7 @@ function exportCSV() {
     const blob = new Blob([csv], {type:'text/csv'});
     const a = document.createElement('a');
     a.href = URL.createObjectURL(blob);
-    a.download = `RAT GAMES-playlists-${Date.now()}.csv`;
+    a.download = `Geeiker Games-playlists-${Date.now()}.csv`;
     a.click();
     notify('Exported to CSV');
 }
@@ -841,7 +841,7 @@ function applyTrackUI(d) {
     // Desktop art
     const az = document.getElementById('art-zone'); az.innerHTML='';
     if(artwork){ const i=document.createElement('img'); i.src=artwork; i.onerror=()=>{az.innerHTML='<div class="art-ph">♪</div>'}; az.appendChild(i); }
-    else az.innerHTML='<div class="art-ph">RAT GAMES</div>';
+    else az.innerHTML='<div class="art-ph">Geeiker Games</div>';
 
     document.getElementById('bg-blur').style.backgroundImage = artwork?`url(${artwork})`:'';
     document.getElementById('d-title').innerHTML = `${sourceIcon}<span class="title-text">${title}</span>`;
@@ -1077,7 +1077,7 @@ function updateFs(title,artist,art,source) {
     document.getElementById('fs-artist').textContent=artist;
     const fa=document.getElementById('fs-art'); fa.innerHTML='';
     if(art){ const i=document.createElement('img'); i.src=art; i.onerror=()=>{fa.innerHTML='<div class="art-ph">♪</div>'}; fa.appendChild(i); }
-    else fa.innerHTML='<div class="art-ph">RAT GAMES</div>';
+    else fa.innerHTML='<div class="art-ph">Geeiker Games</div>';
     document.getElementById('fs-bg').style.backgroundImage=art?`url(${art})`:'';
     const dl=document.getElementById('fs-dl'); if(dl) dl.style.display='inline-block';
 }
@@ -1245,7 +1245,7 @@ async function doDownload() {
                 curData.artwork?fetch(curData.artwork).then(r=>r.arrayBuffer()).catch(()=>null):Promise.resolve(null)
             ]);
             const writer=new ID3Writer(mp3);
-            writer.setFrame('TIT2',curData.title).setFrame('TPE1',[curData.artist]).setFrame('TALB','RAT GAMES Music');
+            writer.setFrame('TIT2',curData.title).setFrame('TPE1',[curData.artist]).setFrame('TALB','Geeiker Games Music');
             if(art) writer.setFrame('APIC',{type:3,data:art,description:'Cover'});
             writer.addTag();
             const a=document.createElement('a'); a.href=URL.createObjectURL(writer.getBlob());

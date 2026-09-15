@@ -4,7 +4,7 @@
 <meta charset="utf-8" />
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap">
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Rat Games</title>
+<title>Geeiker Games</title>
 <style>
   :root {
     --accent-color: #c0622f;
@@ -268,7 +268,7 @@
   body::-webkit-scrollbar-track { background: transparent; }
   body::-webkit-scrollbar-thumb { background: rgba(192,98,47,0.2); border-radius: 8px; }
 
-  /* Rat GIF — fixed, above the dark overlay, below all content */
+  /* Geeiker GIF — fixed, above the dark overlay, below all content */
   #bg-rat {
     position: fixed;
     top: 50%;
@@ -286,7 +286,7 @@
 
   <img id="bg-rat" src="../media/bg.gif" alt="" aria-hidden="true">
 
-  <h1 id="page-title" class="bold">Rat Games</h1>
+  <h1 id="page-title" class="bold">Geeiker Games</h1>
 
   <div id="mode-toggle">
     <button id="btn-games" class="mode-btn active" onclick="setMode('games')">🎮 Games</button>
@@ -352,7 +352,7 @@ Candy Crush Saga, ../media/cloudimages/icon_CandyCrushSaga.webp, ../app/cloud.ht
 Squad Busters, ../media/cloudimages/icon_SquadBusters.webp, ../app/cloud.html?game=com.supercell.squad, cloud
 Roblox 2, ../media/gameimages/roblox.png, https://nowgg.fun/apps/a/19900/b.html
 Fortnite 2, ../media/gameimages/fortnite.webp, https://nowgg.fun/apps/aptoide/5874/aptoide.html?deep_link=aptoidesearch://com.epicgames.fortnite
-Rat Simulator, ../media/gameimages/rat.png, https://ratcar.netlify.app/
+Geeiker Simulator, ../media/gameimages/rat.png, https://ratcar.netlify.app/
 1v1.lol, ../media/gameimages/1v1lol.png, https://1v1lol-unblocked-free.github.io/
 Minecraft, ../media/gameimages/minecraft.png, https://4texas4.github.io/EaglyMC/
 Clash Royale, ../media/gameimages/clash.png, https://www.friv.com/z/games/clashofvikings/index-x.html
@@ -752,7 +752,7 @@ ChatGPT, ../media/cloudimages/icon_ChatGPT.webp, ../app/cloud.html?game=com.open
     const isTools = mode === 'tools';
     currentList = isTools ? toolsList : gamesList;
 
-    const label = isTools ? 'RAT GAMES TOOLS' : 'RAT GAMES';
+    const label = isTools ? 'Geeiker Games TOOLS' : 'Geeiker Games';
     titleEl.textContent = label;
     titleEl.classList.remove('wave');
 
@@ -766,7 +766,7 @@ ChatGPT, ../media/cloudimages/icon_ChatGPT.webp, ../app/cloud.html?game=com.open
     });
     titleEl.classList.add('wave');
 
-    document.title = isTools ? 'Rat Games Tools' : 'Rat Games';
+    document.title = isTools ? 'Geeiker Games Tools' : 'Geeiker Games';
     searchEl.placeholder = isTools ? 'Search tools...' : 'Search games...';
     searchEl.value = '';
 

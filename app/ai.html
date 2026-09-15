@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Rat AI</title>
+<title>Geeiker AI</title>
 <link rel="icon" type="image/png" href="../../media/favicon.png">
 <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
 <style>
@@ -290,7 +290,7 @@ html, body { height: 100%; background: var(--bg); color: var(--text); font-famil
 
   <!-- SIDEBAR -->
   <aside class="sidebar" id="sidebar">
-    <div class="logo">Rat AI <span>2</span></div>
+    <div class="logo">Geeiker AI <span>2</span></div>
 
     <button class="new-chat-btn" id="newChatBtn">
       <i class="ri-add-line"></i> New conversation
@@ -360,7 +360,7 @@ html, body { height: 100%; background: var(--bg); color: var(--text); font-famil
             <button id="removeImg" style="position:absolute;top:-6px;right:-6px;width:18px;height:18px;border-radius:50%;background:var(--surface2);border:1px solid var(--border);color:var(--text-muted);font-size:10px;cursor:pointer;display:flex;align-items:center;justify-content:center;line-height:1">×</button>
           </div>
         </div>
-        <textarea id="msgInput" placeholder="Message Rat AI..." rows="1"></textarea>
+        <textarea id="msgInput" placeholder="Message Geeiker AI..." rows="1"></textarea>
         <div class="input-box-footer">
           <div class="input-actions">
             <input type="file" id="imageFileInput" accept="image/*" style="display:none">
@@ -504,7 +504,7 @@ function loadConvo(id) {
         d.innerHTML = `
           <div class="msg-header">
             <div class="msg-avatar"><i class="ri-robot-2-line"></i></div>
-            <span class="msg-name">Rat AI</span>
+            <span class="msg-name">Geeiker AI</span>
             <span class="msg-model">llama-3.3-70b-versatile</span>
           </div>
           <div class="msg-body"><div class="bubble">${html}</div></div>`;
@@ -667,7 +667,7 @@ document.querySelectorAll('.mode-chip').forEach(chip => {
     chip.classList.add('active');
     currentMode = chip.dataset.mode;
     modeDesc.textContent = modeDescriptions[currentMode];
-    msgInput.placeholder = `Message Rat AI (${chip.textContent.trim()})...`;
+    msgInput.placeholder = `Message Geeiker AI (${chip.textContent.trim()})...`;
     msgInput.focus();
   });
 });
@@ -975,7 +975,7 @@ function appendAIMsg(html) {
   d.innerHTML = `
     <div class="msg-header">
       <div class="msg-avatar"><i class="ri-robot-2-line"></i></div>
-      <span class="msg-name">Rat AI</span>
+      <span class="msg-name">Geeiker AI</span>
       <span class="msg-model">llama-3.3-70b-versatile</span>
     </div>
     <div class="msg-body"><div class="bubble">${html}</div></div>`;
@@ -989,7 +989,7 @@ function appendThinking() {
   d.innerHTML = `
     <div class="msg-header">
       <div class="msg-avatar"><i class="ri-robot-2-line"></i></div>
-      <span class="msg-name">Rat AI</span>
+      <span class="msg-name">Geeiker AI</span>
       <span class="msg-model">llama-3.3-70b-versatile</span>
     </div>
     <div class="msg-body"><div class="bubble" style="color:var(--text-muted)">Thinking<span class="thinking-dots"><span>.</span><span>.</span><span>.</span></span></div></div>`;
